@@ -166,10 +166,10 @@
  */
 #define X_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
 #define Y_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
-#define Z_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
+#define Z_DRIVER_TYPE  A4988
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-#define Z2_DRIVER_TYPE TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
+#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 //#define I_DRIVER_TYPE  A4988
@@ -185,12 +185,7 @@
 //#define E4_DRIVER_TYPE A4988
 //#define E5_DRIVER_TYPE A4988
 //#define E6_DRIVER_TYPE A4988
-//#define E7_DRIVER_TYPE A4988
-
-/**
- * Additional Axis Settings
- *
- * Define AXISn_ROTATES for all axes that rotate or pivot.
+//#define E7_DRIVER_TYPE A4988Z_at rotate or pivot.
  * Rotational axis coordinates are expressed in degrees.
  *
  * AXISn_NAME defines the letter used to refer to the axis in (most) G-code commands.
@@ -1722,8 +1717,8 @@
 #define Y_BED_SIZE 295 // To stop pulleys hitting stepper mounts
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -5    // Centre printable area on the bed
-#define Y_MIN_POS 0
+#define X_MIN_POS -150    // Centre printable area on the bed
+#define Y_MIN_POS -150
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
