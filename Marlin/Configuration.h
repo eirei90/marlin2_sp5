@@ -66,7 +66,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(wjohnsaunders, SapphirePlus)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(eirei, SapphirePlus)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -166,10 +166,10 @@
  */
 #define X_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
 #define Y_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
-#define Z_DRIVER_TYPE  A4988
+#define Z_DRIVER_TYPE  TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-#define Z2_DRIVER_TYPE A4988
+#define Z2_DRIVER_TYPE TERN(SAPPHIRE_PLUS_TMC_UART,TMC2208,TMC2208_STANDALONE)
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 //#define I_DRIVER_TYPE  A4988
